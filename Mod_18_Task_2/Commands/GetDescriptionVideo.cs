@@ -18,11 +18,12 @@ namespace Mod_18_Task_2.Commands
             this.receiver = receiver;
             this.urlVideo = urlVideo;
         }
-        public override async void Run()
+        public override void Run()
         {
+            Console.WriteLine("\nОПИСАНИЕ К ВИДЕО:");
             var youtube = new YoutubeClient();
 
-            var video = await youtube.Videos.GetAsync(urlVideo);
+            var video = youtube.Videos.GetAsync(urlVideo).Result;
             Console.WriteLine($"Название видео: {video.Title}");
             Console.WriteLine($"Название канала: {video.Author.Title}");
             Console.WriteLine($"Длительность видео: {video.Duration}");

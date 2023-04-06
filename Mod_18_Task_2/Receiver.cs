@@ -8,9 +8,9 @@ namespace Mod_18_Task_2
 {
     class Receiver
     {
-        public void Operaton()
+        public void Operaton(string infoForReceiver = "")
         {
-            Console.WriteLine("Команда выполнена!");
+            Console.WriteLine(infoForReceiver);
         }
     }
 }

@@ -15,6 +15,9 @@ namespace Mod_18_Task_2
             var getDescription = new GetDescriptionVideo(receiver, url);
             sender.SetCommand(getDescription);
             sender.Run();
+
+            sender.SetCommand(new DownloadVideo(receiver, url));
+            sender.Run();
         }
     }
 }

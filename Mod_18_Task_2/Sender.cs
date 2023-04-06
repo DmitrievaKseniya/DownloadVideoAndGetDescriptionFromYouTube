@@ -15,9 +15,9 @@ namespace Mod_18_Task_2
             _command = command;
         }
 
-        public void Run()
+        public async void Run()
         {
-            _command.Run();
+           _command.Run();
         }
     }
 }
